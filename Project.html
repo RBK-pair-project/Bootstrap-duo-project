@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title> </title>
+</head>
+<body>
+	<center>
+	<div id="page1">
+		<h2>Welcome to</h2>
+		<h1>do not cook</h1>
+		<h3> Your food delivery service platform</h3>
+		<h3>Fresh. Fast. Local.</h3>
+		<label for="" >Username:</label>
+		<input type="text" id="username" placeholder="enter your name">
+		<br><br>
+		<label for="">Password:</label>
+		<input type="Password" id="password" placeholder="enter your password">
+		<br><br>
+		<input type="submit" id="submit" value="Enter"/>
+	</div>
+	</center>
+	<div id="page2" style='display:none'>
+		<img src="img/1.jpg" style='width:350px'>
+		<img src="img/2" style='width:350px'>
+		<img src="img/3.jpg" style='width:350px'>
+		<h4>La Pasta Restaurant</h4>
+		<h4>Al Madina Restaurant</h4>
+		<h4>Expresso Coffee Shop</h4>
+		<br><br>
+		<input type="submit" id="order1" value="Order"/>
+		<input type="submit" id="order2" value="Order"/>
+		<input type="submit" id="order3" value="Order"/>
+	</div>
+
+	<div id="page31" style='display:none'>
+		<input type="submit" class="retour" value="Back"/>
+		<br><br>
+		<img src="img/Spaghetti.jpg" alt="Spaghetti" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check11" />Spaghetti : 11D</h5>
+		<img src="img/Pizza.jpg" alt="Pizza" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check12" />Pizza : 15D</h5>
+		<img src="img/Pasta e fagioli.jpg" alt="Pasta e fagioli" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check13" />Pasta e fagioli : 9D</h5>
+		<img src="img/Minestrone.jpeg" alt="Minestrone" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check14" />Minestrone : 9D</h5>
+		<img src="img/Risotto.jpg" alt="Risotto" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check15" />Risotto : 8D</h5>
+		<img src="img/Cacciucco.jpg" alt="Cacciucco" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check16" />Cacciucco : 13D</h5>
+
+		<div class="panier" style="border: 1px solid black">
+			<p>here is your order : </p>
+		</div>
+	</div>
+
+	<div id="page32" style='display:none'>
+		<input type="submit" class="retour" value="Back"/>
+		<br><br>
+		<img src="img/Couscous.jpg" alt="Couscous" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check21" />Couscous : 16D</h5>
+		<img src="img/Ojja.jpg" alt="Ojja" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check22" />Ojja : 11D</h5>
+		<img src="img/plat-tunisien.jpg" alt="plat-tunisien" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check23" />plat tunisien : 8D</h5>
+		<img src="img/Kafteji.jpg" alt="Kafteji" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check24" />Kafteji : 7D</h5>
+		<img src="img/Brick.gif" alt="Brick" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check25" />Brick : 3D</h5>
+		<img src="img/Fricasses.jpg" alt="Fricasses" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check26" />Fricassée : 2D</h5>
+
+		<div class="panier1" style="border: 1px solid black">
+			<p>here is your order : </p>
+		</div>
+	</div>
+
+	<div id="page33" style='display:none'>
+		<input type="submit" class="retour" value="Back"/>
+		<br><br>
+		<img src="img/Cappuccino.jpg" alt="Cappuccino" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check31" />Cappuccino : 8D</h5>
+		<img src="img/Hot Chocolate.jpg" alt="Hot Chocolate" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check32" />Hot Chocolate : 9D</h5>
+		<img src="img/caffe latte.jpg" alt="caffe latte" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check33" />Caffe Latte : 8D</h5>
+		<img src="img/Jus.jpg" alt="Jus" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check34" />Jus : 11D</h5>
+		<img src="img/Tea.jpeg" alt="Tea" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check35" />Tea : 5D</h5>
+		<img src="img/Croissant.jpg" alt="Croissant" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check36" />Croissant : 3D</h5>
+
+		<div class="panier2" style="border: 1px solid black">
+			<p>here is your order : </p>
+		</div>
+	</div>
+
+
+	<script src='https://code.jquery.com/jquery-2.2.4.js'></script>
+	<script type="text/javascript" src="Project.js"></script>
+	<script>
+		$('#submit').click(function(a){
+			if($("#username").val()==="moez" && $("#password").val()==="moez" || $("#username").val()==="amine" && $("#password").val()==="amine"){
+				$("#page1").css('display','none')
+				$('#page2').css('display','block')
+			}else{a.preventDefault()}
+		})
+
+		$('#order1').click(function(){
+			$('#page2').css('display','none')
+			$('#page31').css('display','block')
+		})
+
+		$('#order2').click(function(){
+			$('#page2').css('display','none')
+			$('#page32').css('display','block')
+		})
+
+		$('#order3').click(function(){
+			$('#page2').css('display','none')
+			$('#page33').css('display','block')
+		})
+
+		$('.retour').click(function(){
+			$('#page2').css('display','block')
+			$('#page31').css('display','none')
+			$('#page32').css('display','none')
+			$('#page33').css('display','none')
+		})
+
+		$("#check11").click(function(){
+         if ($(this).is(":checked")) { $('.panier').append("<li id='Spaghetti'>Spaghetti : 11D</li>")}
+         else{ $('#Spaghetti').remove()}
+     	});  
+     	$("#check12").click(function(){
+         if ($(this).is(":checked")) { $('.panier').append("<li id='Pizza'>Pizza : 15D</li>")}
+         else{ $('#Pizza').remove()}
+     	}); 
+     	$("#check13").click(function(){
+         if ($(this).is(":checked")) { $('.panier').append("<li id='Pastaefagioli'>Pasta e fagioli : 9D</li>")}
+         else{ $('#Pastaefagioli').remove()}
+     	}); 
+     	$("#check14").click(function(){
+         if ($(this).is(":checked")) { $('.panier').append("<li id='Minestrone'>Minestrone : 9D</li>")}
+         else{ $('#Minestrone').remove()}
+     	}); 
+     	$("#check15").click(function(){
+         if ($(this).is(":checked")) { $('.panier').append("<li id='Risotto'>Risotto : 8D</li>")}
+         else{ $('#Risotto').remove()}
+     	}); 
+     	$("#check16").click(function(){
+         if ($(this).is(":checked")) { $('.panier').append("<li id='Cacciucco'>Cacciucco : 13D</li>")}
+         else{ $('#Cacciucco').remove()}
+     	}); 
+
+     	$("#check21").click(function(){
+         if ($(this).is(":checked")) { $('.panier1').append("<li id='Couscous'>Couscous : 16D</li>")}
+         else{ $('#Couscous').remove()}
+     	});  
+     	$("#check22").click(function(){
+         if ($(this).is(":checked")) { $('.panier1').append("<li id='Ojja'>Ojja : 11D</li>")}
+         else{ $('#Ojja').remove()}
+     	}); 
+     	$("#check23").click(function(){
+         if ($(this).is(":checked")) { $('.panier1').append("<li id='plat-tunisien'>plat tunisien : 8D</li>")}
+         else{ $('#plat-tunisien').remove()}
+     	}); 
+     	$("#check24").click(function(){
+         if ($(this).is(":checked")) { $('.panier1').append("<li id='Kafteji'>Kafteji : 7D</li>")}
+         else{ $('#Kafteji').remove()}
+     	}); 
+     	$("#check25").click(function(){
+         if ($(this).is(":checked")) { $('.panier1').append("<li id='Brick'>Brick : 3D</li>")}
+         else{ $('#Brick').remove()}
+     	}); 
+     	$("#check26").click(function(){
+         if ($(this).is(":checked")) { $('.panier1').append("<li id='Fricasses'>Fricassée : 2D</li>")}
+         else{ $('#Fricasses').remove()}
+     	}); 
+
+
+     	$("#check31").click(function(){
+         if ($(this).is(":checked")) { $('.panier2').append("<li id='Cappuccino'>Cappuccino : 8D</li>")}
+         else{ $('#Cappuccino').remove()}
+     	});  
+     	$("#check32").click(function(){
+         if ($(this).is(":checked")) { $('.panier2').append("<li id='HotChocolate'>Hot Chocolate : 9D</li>")}
+         else{ $('#HotChocolate').remove()}
+     	}); 
+     	$("#check33").click(function(){
+         if ($(this).is(":checked")) { $('.panier2').append("<li id='CaffeLatte'>Caffe Latte : 8D</li>")}
+         else{ $('#CaffeLatte').remove()}
+     	}); 
+     	$("#check34").click(function(){
+         if ($(this).is(":checked")) { $('.panier2').append("<li id='Jus'>Jus : 11D</li>")}
+         else{ $('#Jus').remove()}
+     	}); 
+     	$("#check35").click(function(){
+         if ($(this).is(":checked")) { $('.panier2').append("<li id='Tea'>Tea : 5D</li>")}
+         else{ $('#Tea').remove()}
+     	}); 
+     	$("#check36").click(function(){
+         if ($(this).is(":checked")) { $('.panier2').append("<li id='Croissant'>Croissant : 3D</li>")}
+         else{ $('#Croissant').remove()}
+     	});
+
+	</script>
+</body>
+</html>
