@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title> </title>
+</head>
+<body>
+	<center>
+	<div id="page1">
+		<h2>Welcome to</h2>
+		<h1>do not cook</h1>
+		<h3> Your food delivery service platform</h3>
+		<h3>Fresh. Fast. Local.</h3>
+		<label for="" >Username:</label>
+		<input type="text" id="username" placeholder="enter your name">
+		<br><br>
+		<label for="">Password:</label>
+		<input type="Password" id="password" placeholder="enter your password">
+		<br><br>
+		<input type="submit" id="submit" value="Enter"/>
+	</div>
+	</center>
+	<div id="page2" style='display:none'>
+		<img src="img/1.jpg" style='width:350px'>
+		<img src="img/2" style='width:350px'>
+		<img src="img/3.jpg" style='width:350px'>
+		<h4>La Pasta Restaurant</h4>
+		<h4>Al Madina Restaurant</h4>
+		<h4>Expresso Coffee Shop</h4>
+		<br><br>
+		<input type="submit" id="order1" value="Order"/>
+		<input type="submit" id="order2" value="Order"/>
+		<input type="submit" id="order3" value="Order"/>
+	</div>
+
+	<div id="page31" style='display:none'>
+		<input type="submit" class="retour" value="Back"/>
+		<br><br>
+		<img src="img/Spaghetti.jpg" alt="Spaghetti" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check11" />Spaghetti : 11D</h5>
+		<img src="img/Pizza.jpg" alt="Pizza" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check12" />Pizza : 15D</h5>
+		<img src="img/Pasta e fagioli.jpg" alt="Pasta e fagioli" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check13" />Pasta e fagioli : 9D</h5>
+		<img src="img/Minestrone.jpeg" alt="Minestrone" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check14" />Minestrone : 9D</h5>
+		<img src="img/Risotto.jpg" alt="Risotto" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check15" />Risotto : 8D</h5>
+		<img src="img/Cacciucco.jpg" alt="Cacciucco" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check16" />Cacciucco : 13D</h5>
+
+		<div id="panier" style="border: 1px solid black">
+			<p>here is your order : </p>
+		</div>
+	</div>
+
+	<div id="page32" style='display:none'>
+		<input type="submit" class="retour" value="Back"/>
+	</div>
+
+	<div id="page33" style='display:none'>
+		<input type="submit" class="retour" value="Back"/>
+	</div>
+
+
+	<script src='https://code.jquery.com/jquery-2.2.4.js'></script>
+	<script type="text/javascript" src="Project.js"></script>
+	<script>
+		$('#submit').click(function(){
+			$("#page1").css('display','none')
+			$('#page2').css('display','block')
+		})
+
+		$('#order1').click(function(){
+			$('#page2').css('display','none')
+			$('#page31').css('display','block')
+		})
+
+		$('#order2').click(function(){
+			$('#page2').css('display','none')
+			$('#page32').css('display','block')
+		})
+
+		$('#order3').click(function(){
+			$('#page2').css('display','none')
+			$('#page33').css('display','block')
+		})
+
+		$('.retour').click(function(){
+			$('#page2').css('display','block')
+			$('#page31').css('display','none')
+			$('#page32').css('display','none')
+			$('#page33').css('display','none')
+		})
+
+		$("#check11").click(function(){
+         if ($(this).is(":checked")) { $('#panier').append("<li id='Spaghetti'>Spaghetti : 11D</li>")}
+         else{ $('#Spaghetti').remove()}
+     	});  
+     	$("#check12").click(function(){
+         if ($(this).is(":checked")) { $('#panier').append("<li id='Pizza'>Pizza : 15D</li>")}
+         else{ $('#Pizza').remove()}
+     	}); 
+     	$("#check13").click(function(){
+         if ($(this).is(":checked")) { $('#panier').append("<li id='Pastaefagioli'>Pasta e fagioli : 9D</li>")}
+         else{ $('#Pastaefagioli').remove()}
+     	}); 
+     	$("#check14").click(function(){
+         if ($(this).is(":checked")) { $('#panier').append("<li id='Minestrone'>Minestrone : 9D</li>")}
+         else{ $('#Minestrone').remove()}
+     	}); 
+     	$("#check15").click(function(){
+         if ($(this).is(":checked")) { $('#panier').append("<li id='Risotto'>Risotto : 8D</li>")}
+         else{ $('#Risotto').remove()}
+     	}); 
+     	$("#check16").click(function(){
+         if ($(this).is(":checked")) { $('#panier').append("<li id='Cacciucco'>Cacciucco : 13D</li>")}
+         else{ $('#Cacciucco').remove()}
+     	}); 
+
+	</script>
+</body>
+</html>
