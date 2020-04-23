@@ -55,26 +55,74 @@
 		<br>
 		<h5><input type="checkbox" id="check16" />Cacciucco : 13D</h5>
 
-		<div id="panier" style="border: 1px solid black">
+		<div class="panier" style="border: 1px solid black">
 			<p>here is your order : </p>
 		</div>
 	</div>
 
 	<div id="page32" style='display:none'>
 		<input type="submit" class="retour" value="Back"/>
+		<br><br>
+		<img src="img/Couscous.jpg" alt="Couscous" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check21" />Couscous : 16D</h5>
+		<img src="img/Ojja.jpg" alt="Ojja" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check22" />Ojja : 11D</h5>
+		<img src="img/plat-tunisien.jpg" alt="plat-tunisien" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check23" />plat tunisien : 8D</h5>
+		<img src="img/Kafteji.jpg" alt="Kafteji" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check24" />Kafteji : 7D</h5>
+		<img src="img/Brick.gif" alt="Brick" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check25" />Brick : 3D</h5>
+		<img src="img/Fricasses.jpg" alt="Fricasses" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check26" />Fricassée : 2D</h5>
+
+		<div class="panier1" style="border: 1px solid black">
+			<p>here is your order : </p>
+		</div>
 	</div>
 
 	<div id="page33" style='display:none'>
 		<input type="submit" class="retour" value="Back"/>
+		<br><br>
+		<img src="img/Cappuccino.jpg" alt="Cappuccino" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check31" />Cappuccino : 8D</h5>
+		<img src="img/Hot Chocolate.jpg" alt="Hot Chocolate" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check32" />Hot Chocolate : 9D</h5>
+		<img src="img/caffe latte.jpg" alt="caffe latte" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check33" />Caffe Latte : 8D</h5>
+		<img src="img/Jus.jpg" alt="Jus" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check34" />Jus : 11D</h5>
+		<img src="img/Tea.jpeg" alt="Tea" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check35" />Tea : 5D</h5>
+		<img src="img/Croissant.jpg" alt="Croissant" style='width:200px'>
+		<br>
+		<h5><input type="checkbox" id="check36" />Croissant : 3D</h5>
+
+		<div class="panier2" style="border: 1px solid black">
+			<p>here is your order : </p>
+		</div>
 	</div>
 
 
 	<script src='https://code.jquery.com/jquery-2.2.4.js'></script>
 	<script type="text/javascript" src="Project.js"></script>
 	<script>
-		$('#submit').click(function(){
-			$("#page1").css('display','none')
-			$('#page2').css('display','block')
+		$('#submit').click(function(a){
+			if($("#username").val()==="moez" && $("#password").val()==="moez" || $("#username").val()==="amine" && $("#password").val()==="amine"){
+				$("#page1").css('display','none')
+				$('#page2').css('display','block')
+			}else{a.preventDefault()}
 		})
 
 		$('#order1').click(function(){
@@ -100,29 +148,80 @@
 		})
 
 		$("#check11").click(function(){
-         if ($(this).is(":checked")) { $('#panier').append("<li id='Spaghetti'>Spaghetti : 11D</li>")}
+         if ($(this).is(":checked")) { $('.panier').append("<li id='Spaghetti'>Spaghetti : 11D</li>")}
          else{ $('#Spaghetti').remove()}
      	});  
      	$("#check12").click(function(){
-         if ($(this).is(":checked")) { $('#panier').append("<li id='Pizza'>Pizza : 15D</li>")}
+         if ($(this).is(":checked")) { $('.panier').append("<li id='Pizza'>Pizza : 15D</li>")}
          else{ $('#Pizza').remove()}
      	}); 
      	$("#check13").click(function(){
-         if ($(this).is(":checked")) { $('#panier').append("<li id='Pastaefagioli'>Pasta e fagioli : 9D</li>")}
+         if ($(this).is(":checked")) { $('.panier').append("<li id='Pastaefagioli'>Pasta e fagioli : 9D</li>")}
          else{ $('#Pastaefagioli').remove()}
      	}); 
      	$("#check14").click(function(){
-         if ($(this).is(":checked")) { $('#panier').append("<li id='Minestrone'>Minestrone : 9D</li>")}
+         if ($(this).is(":checked")) { $('.panier').append("<li id='Minestrone'>Minestrone : 9D</li>")}
          else{ $('#Minestrone').remove()}
      	}); 
      	$("#check15").click(function(){
-         if ($(this).is(":checked")) { $('#panier').append("<li id='Risotto'>Risotto : 8D</li>")}
+         if ($(this).is(":checked")) { $('.panier').append("<li id='Risotto'>Risotto : 8D</li>")}
          else{ $('#Risotto').remove()}
      	}); 
      	$("#check16").click(function(){
-         if ($(this).is(":checked")) { $('#panier').append("<li id='Cacciucco'>Cacciucco : 13D</li>")}
+         if ($(this).is(":checked")) { $('.panier').append("<li id='Cacciucco'>Cacciucco : 13D</li>")}
          else{ $('#Cacciucco').remove()}
      	}); 
+
+     	$("#check21").click(function(){
+         if ($(this).is(":checked")) { $('.panier1').append("<li id='Couscous'>Couscous : 16D</li>")}
+         else{ $('#Couscous').remove()}
+     	});  
+     	$("#check22").click(function(){
+         if ($(this).is(":checked")) { $('.panier1').append("<li id='Ojja'>Ojja : 11D</li>")}
+         else{ $('#Ojja').remove()}
+     	}); 
+     	$("#check23").click(function(){
+         if ($(this).is(":checked")) { $('.panier1').append("<li id='plat-tunisien'>plat tunisien : 8D</li>")}
+         else{ $('#plat-tunisien').remove()}
+     	}); 
+     	$("#check24").click(function(){
+         if ($(this).is(":checked")) { $('.panier1').append("<li id='Kafteji'>Kafteji : 7D</li>")}
+         else{ $('#Kafteji').remove()}
+     	}); 
+     	$("#check25").click(function(){
+         if ($(this).is(":checked")) { $('.panier1').append("<li id='Brick'>Brick : 3D</li>")}
+         else{ $('#Brick').remove()}
+     	}); 
+     	$("#check26").click(function(){
+         if ($(this).is(":checked")) { $('.panier1').append("<li id='Fricasses'>Fricassée : 2D</li>")}
+         else{ $('#Fricasses').remove()}
+     	}); 
+
+
+     	$("#check31").click(function(){
+         if ($(this).is(":checked")) { $('.panier2').append("<li id='Cappuccino'>Cappuccino : 8D</li>")}
+         else{ $('#Cappuccino').remove()}
+     	});  
+     	$("#check32").click(function(){
+         if ($(this).is(":checked")) { $('.panier2').append("<li id='HotChocolate'>Hot Chocolate : 9D</li>")}
+         else{ $('#HotChocolate').remove()}
+     	}); 
+     	$("#check33").click(function(){
+         if ($(this).is(":checked")) { $('.panier2').append("<li id='CaffeLatte'>Caffe Latte : 8D</li>")}
+         else{ $('#CaffeLatte').remove()}
+     	}); 
+     	$("#check34").click(function(){
+         if ($(this).is(":checked")) { $('.panier2').append("<li id='Jus'>Jus : 11D</li>")}
+         else{ $('#Jus').remove()}
+     	}); 
+     	$("#check35").click(function(){
+         if ($(this).is(":checked")) { $('.panier2').append("<li id='Tea'>Tea : 5D</li>")}
+         else{ $('#Tea').remove()}
+     	}); 
+     	$("#check36").click(function(){
+         if ($(this).is(":checked")) { $('.panier2').append("<li id='Croissant'>Croissant : 3D</li>")}
+         else{ $('#Croissant').remove()}
+     	});
 
 	</script>
 </body>
