@@ -4,6 +4,7 @@ html {
  background-repeat: no-repeat;
 }
 
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 .circle {
   display: block;
   width: 180px;
@@ -15,6 +16,10 @@ html {
   border: 5px solid #eee;
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
+}
+
+#getBack , .retour , #home {
+  font-size: 30px;
 }
 
 .container2 {
@@ -50,7 +55,7 @@ h4 {
 }
 
 /*panier*/
-.panier, .panier1, .panier2 {
+.panier1, .panier2, .panier3 {
 border: 11px outset #1C6EA4;
 border-radius: 40px;
 padding-bottom: 120px;
@@ -71,9 +76,22 @@ li {
   margin-left: 40px;
 }
 
+.error , .error1 , .error4{
+  font-size: 18px;
+  color:red;
+  margin-left: 40px;
+  text-align: center;
+}
+
+.total{
+  font-size: 22px;
+  color:#004470;
+  margin-left: 40px;
+}
+
 .line{
 width: 100%;
-height: 47px;
+height: 50px;
 border-bottom: 3px solid #004470;
 }
 
@@ -102,15 +120,41 @@ border-bottom: 3px solid #004470;
   top:1px;
 }
 
+.total1 , .total2 , .total3 {
+  box-shadow:inset 0px 1px 0px 0px #fbafe3;
+  background:linear-gradient(to bottom, #1C6EA4 5%, #1C6EA4 100%);
+  background-color:#1C6EA4;
+  border-radius:35px;
+  border:1px solid #82ff93;
+  cursor:pointer;
+  color:black;
+  font-family:Arial;
+  font-size:20px;
+  font-weight:bold;
+  padding:5px 15px;
+  float: right;
+  margin-top: 10%;
+  margin-right: 10px;
+  position: relative;
+}
+.total1:hover ,.total2:hover,.total3:hover {
+  background:linear-gradient(to bottom, #24a8ff 5%, #24a8ff 100%);
+  background-color:#24a8ff;
+}
+.total1:active, .total2:active, .total3:active {
+  position:relative;
+  top:1px;
+}
+
 /* page 1*/
 .css-input { padding:5px; 
-  font-size:27px; 
+  font-size:24px; 
   text-align:left; 
   border-width:7px; 
   border-radius:50px; 
   border-style:outset; 
   background-color:#ffffff; 
-  border-color:#ff00ff; 
+  border-color:green; 
   text-shadow:0px 0px 0px 
   rgba(42,42,42,.75); 
   box-shadow: 0px 0px 5px 0px 
@@ -119,8 +163,61 @@ border-bottom: 3px solid #004470;
 } 
 .css-input:focus { outline:none; } 
 .label-input {
-  font-size: 40px;
-  color:#ff00ff;
+  font-size: 30px;
+  color:green;
+}
+
+.span1 {
+  font-size: 20px;
+  color:green;
+  position: relative;
+  float: right;
+  margin-right: 20px;
+}
+h2, h3{
+  color:#db0050;
+}
+h1{
+  font-family: Impact, Charcoal, sans-serif;
+font-size: 60px;
+letter-spacing: 5.6px;
+word-spacing: 0px;
+color: #BC1868;
+font-weight: 400;
+font-style: normal;
+font-variant: normal;
+text-transform: capitalize;
+}
+
+.div-error {
+  border: 1px normal white;
+  background-color: white;
+  margin-left: 37%;
+  margin-right: 37%;
+  text-align: center;
+}
+
+/*page 4*/
+.input4 { padding:5px; 
+  font-size:20px; 
+  text-align:center; 
+  border-width:7px; 
+  border-radius:50px; 
+  border-style:outset; 
+  background-color:#ffffff; 
+  border-color:green; 
+  text-shadow:0px 0px 0px 
+  rgba(42,42,42,.75); 
+  box-shadow: 0px 0px 5px 0px 
+  rgba(42,42,42,.75); 
+  -style:none;
+  margin-right: 20px;
+} 
+.input4:focus { outline:none; } 
+.label4 {
+  font-size: 20px;
+  color:green;
+  font-weight:bold;
 }
 
 /* submit*/
@@ -140,11 +237,11 @@ border-bottom: 3px solid #004470;
   text-decoration:none;
   text-align: center;
 }
-.submit:hover {
+.submit:hover, #confirm:hover {
   background:linear-gradient(to bottom, #00ad17 5%, #00ad17 100%);
   background-color:#ef027d;
 }
-.submit:active {
+.submit:active, #confirm:active {
   position:relative;
   top:1px;
 }

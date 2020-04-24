@@ -4,14 +4,17 @@
 	<meta charset="utf-8">
     <title> </title>
     <link rel="stylesheet" href="Project.css">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </head>
 <body>
 	<center>
 	<div id="page1">
+		<div class="span1">Sign Up</div>
+		<br>
 		<h2>Welcome to</h2>
 		<h1>do not cook</h1>
 		<h3> Your food delivery service platform</h3>
-		<h3>Fresh. Fast. Local.</h3>
+		<h3>Fresh.   Fast.   Local.</h3>
 		<label for="" class="label-input">Username:</label>
 		<input type="text" id="username" class="css-input" placeholder="enter your name">
 		<br><br>
@@ -19,6 +22,9 @@
 		<input type="Password" id="password" class="css-input" placeholder="enter your password">
 		<br><br>
 		<input type="submit" id="submit" class="submit" value="Enter"/>
+		<div class="div-error">
+		<p class='error1' style='display:none' >Invalid Username or Password</p>
+		</div>
 
 	</div>
 	</center>
@@ -41,7 +47,7 @@
 	</div>
 
 	<div id="page31" style='display:none'>
-		<input type="submit" class="retour" value="Back"/>
+		<button class="retour"><i class="fas fa-arrow-circle-left"></i></button>
 		<br><br>
 		<div class="container3" >
 			<img src="img/Spaghetti.jpg" alt="Spaghetti" class="circle" >
@@ -81,15 +87,16 @@
 		</div>
 		<br>
 		<br><br>
-		<div class="panier" >
+		<div class="panier1" >
 			<h5 class="h5">Your order is here : </h5>
 			<input type="submit" class="accept" value="accept">
 			<div class="line"></div>
+			<input type="submit" class="total1" value="total">
 		</div>
 	</div>
 
 	<div id="page32" style='display:none'>
-		<input type="submit" class="retour" value="Back"/>
+		<button class="retour"><i class="fas fa-arrow-circle-left"></i></button>
 		<br><br>
 		<div class="container3" >
 			<img src="img/Couscous.jpg" alt="Couscous" class="circle">
@@ -129,15 +136,16 @@
 		</div>
 		<br>
 		<br><br>
-		<div class="panier1" >
+		<div class="panier2" >
 			<h5 class="h5">Your order is here : </h5>
 			<input type="submit" class="accept" value="accept">
 			<div class="line"></div>
+			<input type="submit" class="total2" value="total">
 		</div>
 	</div>
 
 	<div id="page33" style='display:none'>
-		<input type="submit" class="retour" value="Back"/>
+		<button class="retour"><i class="fas fa-arrow-circle-left"></i></button>
 		<br><br>
 		<div class="container3" >
 			<img src="img/Cappuccino.jpg" alt="Cappuccino" class="circle">
@@ -177,29 +185,34 @@
 		</div>	
 		<br>
 		<br><br>
-		<div class="panier2" >
+		<div class="panier3" >
 			<h5 class="h5">Your order is here : </h5>
 			<input type="submit" class="accept" value="accept">
 			<div class="line"></div>
+			<input type="submit" class="total3" value="total">
 		</div>
 	</div>
 	<div id="page4" style='display:none'>
-			<button id='getBack'>Back</button>
+			<button id='getBack'><i class="fas fa-arrow-circle-left"></i></button>
 			<br><br>
-			<p>please fill you imformations:</p>
-			<label for="">Name:</label>
-			<input type="text" id="name" placeholder="Name"/>
-			<label for="">Address:</label>
-			<input type="text" id="address" placeholder="Address"/>
-			<label for="">Credit Card Number:</label>
-			<input type="text" id="cell" placeholder="credit card number"/>
-			<label for="">phone Number:</label>
-			<input type="text" id="cell" placeholder="phone number"/>
+			<h4>please fill your informations:</h4>
+			<label for="" class='label4'>Name:</label>
+			<input type="text" id ='input41' class='input4' placeholder="Name"/>
+			<label for="" class='label4'>Address:</label>
+			<input type="text" id ='input42' class='input4' placeholder="Address"/>
+			<br><br>
+			<label for="" class='label4'>Credit Card Number:</label>
+			<input type="text" id ='input43' class='input4' placeholder="credit card number"/>
+			<label for="" class='label4'>phone Number:</label>
+			<input type="text" id ='input44' class='input4' placeholder="phone number"/>
 			<br><br>
 			<input type="submit" id="confirm" value="confirm/pay">
+			<div class="div-error">
+			<p class='error4' style='display:none' >Missing or Incorrect Informations</p>
+			</div>
 	</div>
 	<div id="lastpage" style="display:none">
-			<button id='home'>Home</button>
+			<button id='home'><i class="fas fa-home"></i></button>
 			<p style="color: red; font-size: 36px">see you at your address in around 15 minutes</p>
 			<img src="img/delivering.gif" width="1000px">
 	</div>
@@ -209,23 +222,30 @@
 	<script type="text/javascript" src="Project.js"></script>
 	<script>
 		$('#submit').click(function(a){
+			if($("#username").val()==="moez" && $("#password").val()==="moez" || $("#username").val()==="amine" && $("#password").val()==="amine"){
 				$("#page1").css('display','none')
 				$('#page2').css('display','block')
+			}else{a.preventDefault() 
+				$('.error1').css('display','block')
+			}
 		})
 
 		$('#order1').click(function(){
 			$('#page2').css('display','none')
 			$('#page31').css('display','block')
+			$('.total').remove()
 		})
 
 		$('#order2').click(function(){
 			$('#page2').css('display','none')
 			$('#page32').css('display','block')
+			$('.total').remove()
 		})
 
 		$('#order3').click(function(){
 			$('#page2').css('display','none')
 			$('#page33').css('display','block')
+			$('.total').remove()
 		})
 
 		$('.retour').click(function(){
@@ -235,19 +255,17 @@
 			$('#page33').css('display','none')
 		})
 
-		$('.accept').click(function(){
+		$('.accept').click(function(e){
+			if (total === undefined) {
+				$("<p class='error' >you didnt order yet</p>").insertAfter('.h5')
+				e.preventDefault()
+			}
+			else {
 			$('#page31').css('display','none')
-			$('#page4').css('display','block')
-		})
-
-		$('.accept').click(function(){
 			$('#page32').css('display','none')
-			$('#page4').css('display','block')
-		})
-
-		$('.accept').click(function(){
 			$('#page33').css('display','none')
 			$('#page4').css('display','block')
+			}
 		})
 
 		$('#getBack').click(function(){
@@ -255,131 +273,213 @@
 			$('#page31').css('display','block')
 		})
 
-		$('#confirm').click(function(){
+		$('#confirm').click(function(a){
+				if ($('#input41').val() === '' || $('#input42').val() === '' || $('#input43').val() === '' || $('#input44').val() === '') {
+				a.preventDefault()
+				$('.error4').css('display','block')
+				}
+				else {
 			$('#page4').css('display','none')
 			$('#lastpage').css('display','block')
+			$('.error4').css('display','none')
+		}
 		})
+
+		var array = ['#check11','#check12','#check13','#check14','#check15','#check16','#check21','#check22','#check23','#check24','#check25','#check26','#check31','#check32','#check33','#check34','#check35','#check36']
+
+		var arr =['.Spaghetti','.Pizza','.Pastaefagioli','.Minestrone','.Risotto','.Cacciucco'
+     			,'.Couscous','.Ojja','.plat-tunisien', '.Kafteji', '.Brick', '.Fricasses','.Cappuccino','.HotChocolate','.CaffeLatte','.Jus','.Tea','.Croissant']
+
 		$('#home').click(function(){
 			$('#lastpage').css('display','none')
 			$('#page2').css('display','block')
+			var total = 0
+			for (var i = 0 ; i< array.length ;i++) {
+					$(array[i]).prop("checked", false)
+					$(arr[i]).remove()
+			}
 		})
 
 		$("#check11").click(function(){
          if ($(this).is(":checked")) {
-         	for (var i=0 ; i < $('#nSpaghetti').val() ;i++) {
-         		$("<li class='Spaghetti'>Spaghetti : 11D</li>").insertAfter('.h5')}}
+         	$('.error').remove()
+         	var x = $('#nSpaghetti').val()
+         		$("<li class='Spaghetti'>x Spaghetti : 11D</li>").insertAfter('.h5')
+         		$('.Spaghetti').prepend("<span class='Spaghetti1'>"+x+"</span>")}
          else{ $('.Spaghetti').remove()}
      	});  
      	$("#check12").click(function(){
          if ($(this).is(":checked")) {
-         	for (var i=0 ; i < $('#nPizza').val() ;i++) {
-         	$("<li class='Pizza'>Pizza : 15D</li>").insertAfter('.h5')}}
+         	$('.error').remove()
+         	var x = $('#nPizza').val()
+         	$("<li class='Pizza'>x Pizza : 15D</li>").insertAfter('.h5')
+         	$('.Pizza').prepend('<span class="Pizza1">'+x+'</span>')}
          else{ $('.Pizza').remove()}
      	}); 
      	$("#check13").click(function(){
          if ($(this).is(":checked")) { 
-         	for (var i=0 ; i < $('#nPastaefagioli').val() ;i++) {
-         	$("<li class='Pastaefagioli'>Pasta e fagioli : 9D</li>").insertAfter('.h5')}}
+         	$('.error').remove()
+         	var x = $('#nPastaefagioli').val()
+         	$("<li class='Pastaefagioli'>x Pasta e fagioli : 9D</li>").insertAfter('.h5')
+         	$('.Pastaefagioli').prepend('<span class="Pastaefagioli1">'+x+'</span>')}
          else{ $('.Pastaefagioli').remove()}
      	}); 
      	$("#check14").click(function(){
          if ($(this).is(":checked")) { 
-         	for (var i=0 ; i < $('#nMinestrone').val() ;i++) {
-         	$("<li class='Minestrone'>Minestrone : 9D</li>").insertAfter('.h5')}}
+         	$('.error').remove()
+         	var x = $('#nMinestrone').val()
+         	$("<li class='Minestrone'>x Minestrone : 9D</li>").insertAfter('.h5')
+         	$('.Minestrone').prepend('<span class="Minestrone1">'+x+'</span>')}
          else{ $('.Minestrone').remove()}
      	}); 
      	$("#check15").click(function(){
          if ($(this).is(":checked")) { 
-         	for (var i=0 ; i < $('#nRisotto').val() ;i++) {
-         	$("<li class='Risotto'>Risotto : 8D</li>").insertAfter('.h5')}}
+         	$('.error').remove()
+         	var x = $('#nRisotto').val()
+         	$("<li class='Risotto'>x Risotto : 8D</li>").insertAfter('.h5')
+         	$('.Risotto').prepend('<span class="Risotto1">'+x+'</span>')}
          else{ $('.Risotto').remove()}
      	}); 
      	$("#check16").click(function(){
          if ($(this).is(":checked")) { 
-         	for (var i=0 ; i < $('#nCacciucco').val() ;i++) {
-         	$("<li class='Cacciucco'>Cacciucco : 13D</li>").insertAfter('.h5')}}
+         	$('.error').remove()
+         	var x = $('#nCacciucco').val()
+         	$("<li class='Cacciucco'>x Cacciucco : 13D</li>").insertAfter('.h5')
+         	$('.Cacciucco').prepend('<span class="Cacciucco1">'+x+'</span>')}
          else{ $('.Cacciucco').remove()}
      	}); 
 
      	$("#check21").click(function(){
          if ($(this).is(":checked")) { 
-         	for (var i=0 ; i < $('#nCouscous').val() ;i++) {
-         	$("<li class='Couscous'>Couscous : 16D</li>").insertAfter('.h5')}}
+         	$('.error').remove()
+         	var x = $('#nCouscous').val()
+         	$("<li class='Couscous'>x Couscous : 16D</li>").insertAfter('.h5')
+         	$('.Couscous').prepend('<span class="Couscous1">'+x+'</span>')}
          else{ $('.Couscous').remove()}
      	});  
      	$("#check22").click(function(){
          if ($(this).is(":checked")) { 
-         	for (var i=0 ; i < $('#nOjja').val() ;i++) {
-         	$("<li class='Ojja'>Ojja : 11D</li>").insertAfter('.h5')}}
+         	$('.error').remove()
+         	var x = $('#nOjja').val()
+         	$("<li class='Ojja'>x Ojja : 11D</li>").insertAfter('.h5')
+         	$('.Ojja').prepend('<span class="Ojja1">'+x+'</span>')}
          else{ $('.Ojja').remove()}
      	}); 
      	$("#check23").click(function(){
          if ($(this).is(":checked")) { 
-         	for (var i=0 ; i < $('#nplat-tunisien').val() ;i++) {
-         	$("<li class='plat-tunisien'>plat tunisien : 8D</li>").insertAfter('.h5')}}
+         	$('.error').remove()
+         	var x = $('#nplat-tunisien').val()
+         	$("<li class='plat-tunisien'>x plat tunisien : 8D</li>").insertAfter('.h5')
+         	$('.plat-tunisien').prepend('<span class="plat-tunisien1">'+x+'</span>')}
          else{ $('.plat-tunisien').remove()}
      	}); 
      	$("#check24").click(function(){
          if ($(this).is(":checked")) { 
-         	for (var i=0 ; i < $('#nKafteji').val() ;i++) {
-         	$("<li class='Kafteji'>Kafteji : 7D</li>").insertAfter('.h5')}}
+         	$('.error').remove()
+         	var x = $('#nKafteji').val()
+         	$("<li class='Kafteji'>x Kafteji : 7D</li>").insertAfter('.h5')
+         	$('.Kafteji').prepend('<span class="Kafteji1">'+x+'</span>')}
          else{ $('.Kafteji').remove()}
      	}); 
      	$("#check25").click(function(){
          if ($(this).is(":checked")) { 
-         	for (var i=0 ; i < $('#nBrick').val() ;i++) {
-         	$("<li class='Brick'>Brick : 3D</li>").insertAfter('.h5')}}
+         	$('.error').remove()
+         	var x = $('#nBrick').val()
+         	$("<li class='Brick'>x Brick : 3D</li>").insertAfter('.h5')
+         	$('.Brick').prepend('<span class="Brick1">'+x+'</span>')}
          else{ $('.Brick').remove()}
      	}); 
      	$("#check26").click(function(){
-         if ($(this).is(":checked")) { 
-         	for (var i=0 ; i < $('#nFricasses').val() ;i++) {
-         	$("<li class='Fricasses'>Fricassée : 2D</li>").insertAfter('.h5')}}
+         if ($(this).is(":checked")) {
+         $('.error').remove() 
+         	var x = $('#nFricasses').val()
+         	$("<li class='Fricasses'>x Fricassée : 2D</li>").insertAfter('.h5')
+         	$('.Fricasses').prepend('<span class="Fricasses1">'+x+'</span>')}
          else{ $('.Fricasses').remove()}
      	}); 
 
 
      	$("#check31").click(function(){
          if ($(this).is(":checked")) { 
-         	for (var i=0 ; i < $('#nCappuccino').val() ;i++) {
-         	$("<li class='Cappuccino'>Cappuccino : 8D</li>").insertAfter('.h5')}}
+         	$('.error').remove()
+         	var x = $('#nCappuccino').val()
+         	$("<li class='Cappuccino'>x Cappuccino : 8D</li>").insertAfter('.h5')
+         	$('.Cappuccino').prepend('<span class="Cappuccino1">'+x+'</span>')}
          else{ $('.Cappuccino').remove()}
      	});  
      	$("#check32").click(function(){
-         if ($(this).is(":checked")) { 
-         	for (var i=0 ; i < $('#nHotChocolate').val() ;i++) {
-         	$("<li class='HotChocolate'>Hot Chocolate : 9D</li>").insertAfter('.h5')}}
+         if ($(this).is(":checked")) {
+         $('.error').remove() 
+         	var x = $('#nHotChocolate').val()
+         	$("<li class='HotChocolate'>x Hot Chocolate : 9D</li>").insertAfter('.h5')
+         	$('.HotChocolate').prepend('<span class="HotChocolate1">'+x+'</span>')}
          else{ $('.HotChocolate').remove()}
      	}); 
      	$("#check33").click(function(){
          if ($(this).is(":checked")) { 
-         	for (var i=0 ; i < $('#nCaffeLatte').val() ;i++) {
-         	$("<li class='CaffeLatte'>Caffe Latte : 8D</li>").insertAfter('.h5')}}
+         	$('.error').remove()
+         	var x = $('#nCaffeLatte').val()
+         	$("<li class='CaffeLatte'>x Caffe Latte : 8D</li>").insertAfter('.h5')
+         	$('.CaffeLatte').prepend('<span class="CaffeLatte1">'+x+'</span>')}
          else{ $('.CaffeLatte').remove()}
      	}); 
      	$("#check34").click(function(){
          if ($(this).is(":checked")) { 
-         	for (var i=0 ; i < $('#nJus').val() ;i++) {
-         	$("<li class='Jus'>Jus : 11D</li>").insertAfter('.h5')}}
+         	$('.error').remove()
+         	var x = $('#nJus').val()
+         	$("<li class='Jus'>x Jus : 11D</li>").insertAfter('.h5')
+         	$('.Jus').prepend('<span class="Jus1">'+x+'</span>')}
          else{ $('.Jus').remove()}
      	}); 
      	$("#check35").click(function(){
          if ($(this).is(":checked")) { 
-         	for (var i=0 ; i < $('#nTea').val() ;i++) {
-         	$("<li class='Tea'>Tea : 5D</li>").insertAfter('.h5')}}
+         	$('.error').remove()
+         	var x = $('#nTea').val()
+         	$("<li class='Tea'>x Tea : 5D</li>").insertAfter('.h5')
+         	$('.Tea').prepend('<span class="Tea1">'+x+'</span>')}
          else{ $('.Tea').remove()}
      	}); 
      	$("#check36").click(function(){
          if ($(this).is(":checked")) { 
-         	for (var i=0 ; i < $('#nCroissant').val() ;i++) {
-         	$("<li class='Croissant'>Croissant : 3D</li>").insertAfter('.h5')}}
+         	$('.error').remove()
+         	var x = $('#nCroissant').val()
+         	$("<li class='Croissant'>x Croissant : 3D</li>").insertAfter('.h5')
+         	$('.Croissant').prepend('<span class="Croissant1">'+x+'</span>')}
          else{ $('.Croissant').remove()}
      	});
 
-     	var object ={'Spaghetti':11,'Pizza':15,'Pasta e fagioli':9,'Minestrone':9,'Risotto':8,'Cacciucco':13,
-     			'Couscous':16,'Ojja':11,'plat tunisien':8,'Cappuccino':8,'Hot Chocolate':9,'Caffe Latte':8,'Jus':11,'Tea':5,'Croissant':3
-     	}
+     	
+		
+		var object ={'Spaghetti1':11,'Pizza1':15,'Pastaefagioli1':9,'Minestrone1':9,'Risotto1':8,'Cacciucco1':13
+     			,'Couscous1':16,'Ojja1':11,'plat-tunisien1':8, 'Kafteji1':7, 'Brick1':3, 'Fricasses1':2,'Cappuccino1':8,'HotChocolate1':9,'CaffeLatte1':8,'Jus1':11,'Tea1':5,'Croissant1':3	}
 
+     			var total;
+		$('.total1').click(function() {
+			total = 0;
+			$('.total').remove()
+			for(var key in object){
+				total += object[key] * (Number($('.'+key).text())%10)
+			}
+			$('.panier1').append("<div class='total'> total = "+total+".000 D</div>")
+		})
+
+		$('.total2').click(function() {
+			total = 0;
+			$('.total').remove()
+			for(var key in object){
+				total += object[key] * (Number($('.'+key).text())%10)
+			}
+			$('.panier2').append("<div class='total'> total = "+total+".000 D</div>")
+		})
+
+		$('.total3').click(function() {
+			total = 0;
+			$('.total').remove()
+			for(var key in object){
+				total += object[key] * (Number($('.'+key).text())%10)
+			}
+			$('.panier3').append("<div class='total'> total = "+total+".000 D</div>")
+		})
 	</script>
 </body>
 </html>
