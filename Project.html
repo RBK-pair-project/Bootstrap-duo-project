@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
     <title> </title>
+    <link rel="stylesheet" href="Project.css">
 </head>
 <body>
 	<center>
@@ -11,162 +12,206 @@
 		<h1>do not cook</h1>
 		<h3> Your food delivery service platform</h3>
 		<h3>Fresh. Fast. Local.</h3>
-		<label for="" >Username:</label>
-		<input type="text" id="username" placeholder="enter your name">
+		<label for="" class="label-input">Username:</label>
+		<input type="text" id="username" class="css-input" placeholder="enter your name">
 		<br><br>
-		<label for="">Password:</label>
-		<input type="Password" id="password" placeholder="enter your password">
+		<label for="" class="label-input">Password:</label>
+		<input type="Password" id="password" class="css-input" placeholder="enter your password">
 		<br><br>
-		<input type="submit" id="submit" value="Enter">
+		<input type="submit" id="submit" class="submit" value="Enter"/>
+
 	</div>
 	</center>
 	<div id="page2" style='display:none'>
-		<img src="img/1.jpg" style='width:350px'>
-		<img src="img/2" style='width:350px'>
-		<img src="img/3.jpg" style='width:350px'>
-		<h4>La Pasta Restaurant</h4>
-		<h4>Al Madina Restaurant</h4>
-		<h4>Expresso Coffee Shop</h4>
-		<br><br>
-		<input type="submit" id="order1" value="Order"/>
-		<input type="submit" id="order2" value="Order"/>
-		<input type="submit" id="order3" value="Order"/>
+		<div class="container2" >
+			<img src="img/1.jpg" style='width:350px' class="square">
+			<h4>La Pasta Restaurant</h4>
+			<input type="submit" id="order1" class="submit" value="Order"/>
+		</div>
+		<div class="container2">
+			<img src="img/2" style='width:350px' class="square">
+			<h4>Al Madina Restaurant</h4>
+			<input type="submit" id="order2" class="submit" value="Order"/>
+		</div>
+		<div class="container2">
+			<img src="img/3.jpg" style='width:350px' class="square">
+			<h4>Expresso Coffee Shop</h4>
+			<input type="submit" id="order3" class="submit" value="Order"/>
+		</div>
 	</div>
 
 	<div id="page31" style='display:none'>
 		<input type="submit" class="retour" value="Back"/>
 		<br><br>
-		<img src="img/Spaghetti.jpg" alt="Spaghetti" style='width:200px'>
+		<div class="container3" >
+			<img src="img/Spaghetti.jpg" alt="Spaghetti" class="circle" >
+			<input type="checkbox" id="check11" class="checkbox"/>
+			<label for="check11" class="label">Spaghetti : 11D</label>
+			<input type="number" id="nSpaghetti" min="1" max="5">
+		</div>
+		<div class="container3" >
+			<img src="img/Pizza.jpg" alt="Pizza" class="circle" >
+			<input type="checkbox" id="check12" class="checkbox"/>
+			<label for="check12" class="label">Pizza : 15D</label>
+			<input type="number" id="nPizza" min="1" max="5">
+		</div>
+		<div class="container3" >
+			<img src="img/Pasta e fagioli.jpg" alt="Pasta e fagioli" class="circle" >
+			<input type="checkbox" id="check13" class="checkbox"/>
+			<label for="check13" class="label">Pasta e fagioli : 9D</label>
+			<input type="number" id="nPastaefagioli" min="1" max="5">
+		</div>
+		<div class="container3" >
+			<img src="img/Minestrone.jpeg" alt="Minestrone" class="circle" >
+			<input type="checkbox" id="check14" class="checkbox"/>
+			<label for="check14" class="label">Minestrone : 9D</label>
+			<input type="number" id="nMinestrone" min="1" max="5">
+		</div>
+		<div class="container3" >
+			<img src="img/Risotto.jpg" alt="Risotto" class="circle" >
+			<input type="checkbox" id="check15" class="checkbox"/>
+			<label for="check15" class="label">Risotto : 8D</label>
+			<input type="number" id="nRisotto" min="1" max="5">
+		</div>
+		<div class="container3" >
+			<img src="img/Cacciucco.jpg" alt="Cacciucco" class="circle" >
+			<input type="checkbox" id="check16" class="checkbox"/>
+			<label for="check16" class="label">Cacciucco : 13D</label>
+			<input type="number" id="nCacciucco" min="1" max="5">
+		</div>
 		<br>
-		<h5><input type="checkbox" id="check11" />Spaghetti : 11D
-		<input type="number" id="nSpaghetti" min="1" max="5"></h5>
-		<img src="img/Pizza.jpg" alt="Pizza" style='width:200px'>
-		<br>
-		<h5><input type="checkbox" id="check12" />Pizza : 15D
-		<input type="number" id="nPizza" min="1" max="5"></h5>
-		<img src="img/Pasta e fagioli.jpg" alt="Pasta e fagioli" style='width:200px'>
-		<br>
-		<h5><input type="checkbox" id="check13" />Pasta e fagioli : 9D
-		<input type="number" id="nPastaefagioli" min="1" max="5"></h5>
-		<img src="img/Minestrone.jpeg" alt="Minestrone" style='width:200px'>
-		<br>
-		<h5><input type="checkbox" id="check14" />Minestrone : 9D
-		<input type="number" id="nMinestrone" min="1" max="5"></h5>
-		<img src="img/Risotto.jpg" alt="Risotto" style='width:200px'>
-		<br>
-		<h5><input type="checkbox" id="check15" />Risotto : 8D
-		<input type="number" id="nRisotto" min="1" max="5"></h5>
-		<img src="img/Cacciucco.jpg" alt="Cacciucco" style='width:200px'>
-		<br>
-		<h5><input type="checkbox" id="check16" />Cacciucco : 13D
-		<input type="number" id="nCacciucco" min="1" max="5"></h5>
-		<div class="panier" style="border: 1px solid black">
-			<p>here is your order : </p>
-			<input type="submit" class="accept" value="accept" style="background: lightgreen;float:right">
+		<br><br>
+		<div class="panier" >
+			<h5 class="h5">Your order is here : </h5>
+			<input type="submit" class="accept" value="accept">
+			<div class="line"></div>
 		</div>
 	</div>
-		
+
 	<div id="page32" style='display:none'>
 		<input type="submit" class="retour" value="Back"/>
 		<br><br>
-		<img src="img/Couscous.jpg" alt="Couscous" style='width:200px'>
+		<div class="container3" >
+			<img src="img/Couscous.jpg" alt="Couscous" class="circle">
+			<input type="checkbox" id="check21" class="checkbox"/>
+			<label for="check21" class="label">Couscous : 16D</label>
+			<input type="number" id="nCouscous" min="1" max="5">
+		</div>
+		<div class="container3" >
+			<img src="img/Ojja.jpg" alt="Ojja" class="circle">
+			<input type="checkbox" id="check22" class="checkbox"/>
+			<label for="check22" class="label">Ojja : 11D</label>
+			<input type="number" id="nOjja" min="1" max="5">
+		</div>
+		<div class="container3" >
+			<img src="img/plat-tunisien.jpg" alt="plat-tunisien" class="circle">
+			<input type="checkbox" id="check23" class="checkbox"/>
+			<label for="check23" class="label">plat tunisien : 8D</label>
+			<input type="number" id="nplat-tunisien" min="1" max="5">
+		</div>
+		<div class="container3" >
+			<img src="img/Kafteji.jpg" alt="Kafteji" class="circle">
+			<input type="checkbox" id="check24" class="checkbox"/>
+			<label for="check24" class="label">Kafteji : 7D</label>
+			<input type="number" id="nKafteji" min="1" max="5">
+		</div>
+		<div class="container3" >
+			<img src="img/Brick.gif" alt="Brick" class="circle">
+			<input type="checkbox" id="check25" class="checkbox"/>
+			<label for="check25" class="label">Brick : 3D</label>
+			<input type="number" id="nBrick" min="1" max="5">
+		</div>
+		<div class="container3" >
+			<img src="img/Fricasses.jpg" alt="Fricasses" class="circle">
+			<input type="checkbox" id="check26" class="checkbox"/>
+			<label for="check26" class="label">Fricassée : 2D</label>
+			<input type="number" id="nFricasses" min="1" max="5">
+		</div>
 		<br>
-		<h5><input type="checkbox" id="check21" />Couscous : 16D
-		<input type="number" id="nCouscous" min="1" max="5"></h5>
-		<img src="img/Ojja.jpg" alt="Ojja" style='width:200px'>
-		<br>
-		<h5><input type="checkbox" id="check22" />Ojja : 11D
-		<input type="number" id="nOjja" min="1" max="5"></h5>
-		<img src="img/plat-tunisien.jpg" alt="plat-tunisien" style='width:200px'>
-		<br>
-		<h5><input type="checkbox" id="check23" />plat tunisien : 8D
-		<input type="number" id="nplat-tunisien" min="1" max="5"></h5>
-		<img src="img/Kafteji.jpg" alt="Kafteji" style='width:200px'>
-		<br>
-		<h5><input type="checkbox" id="check24" />Kafteji : 7D
-		<input type="number" id="nKafteji" min="1" max="5"></h5>
-		<img src="img/Brick.gif" alt="Brick" style='width:200px'>
-		<br>
-		<h5><input type="checkbox" id="check25" />Brick : 3D
-		<input type="number" id="nBrick" min="1" max="5"></h5>
-		<img src="img/Fricasses.jpg" alt="Fricasses" style='width:200px'>
-		<br>
-		<h5><input type="checkbox" id="check26" />Fricassée : 2D
-		<input type="number" id="nFricasses" min="1" max="5"></h5>
-
-		<div class="panier1" style="border: 1px solid black">
-			<p>here is your order : </p>
-			<input type="submit" class="accept" value="accept" style="background: lightgreen;float:right">
+		<br><br>
+		<div class="panier1" >
+			<h5 class="h5">Your order is here : </h5>
+			<input type="submit" class="accept" value="accept">
+			<div class="line"></div>
 		</div>
 	</div>
 
 	<div id="page33" style='display:none'>
 		<input type="submit" class="retour" value="Back"/>
 		<br><br>
-		<img src="img/Cappuccino.jpg" alt="Cappuccino" style='width:200px'>
+		<div class="container3" >
+			<img src="img/Cappuccino.jpg" alt="Cappuccino" class="circle">
+			<input type="checkbox" id="check31" class="checkbox"/>
+			<label for="check31" class="label">Cappuccino : 8D</label>
+			<input type="number" id="nCappuccino" min="1" max="5" >
+		</div>
+		<div class="container3" >
+			<img src="img/Hot Chocolate.jpg" alt="Hot Chocolate" class="circle">
+			<input type="checkbox" id="check32" class="checkbox"/>
+			<label for="check32" class="label">Hot Chocolate : 9D</label>
+			<input type="number" id="nHotChocolate" min="1" max="5">
+		</div>
+		<div class="container3" >
+			<img src="img/caffe latte.jpg" alt="caffe latte" class="circle">
+			<input type="checkbox" id="check33" class="checkbox"/>
+			<label for="check33" class="label">Caffe Latte : 8D</label>
+			<input type="number" id="nCaffeLatte" min="1" max="5">
+		</div>
+		<div class="container3" style=>
+			<img src="img/Jus.jpg" alt="Jus" class="circle">
+			<input type="checkbox" id="check34" class="checkbox"/>
+			<label for="check34" class="label">Jus : 11D</label>
+			<input type="number" id="nJus" min="1" max="5">
+		</div>
+		<div class="container3" >
+			<img src="img/Tea.jpeg" alt="Tea" class="circle">
+			<input type="checkbox" id="check35" class="checkbox"/>
+			<label for="check35" class="label">Tea : 5D</label>
+			<input type="number" id="nTea" min="1" max="5">
+		</div>
+		<div class="container3" >
+			<img src="img/Croissant.jpg" alt="Croissant" class="circle">
+			<input type="checkbox" id="check36" class="checkbox"/>
+			<label for="check36" class="label">Croissant : 3D</label>
+			<input type="number" id="nCroissant" min="1" max="5">
+		</div>	
 		<br>
-		<h5><input type="checkbox" id="check31" />Cappuccino : 8D
-		<input type="number" id="nCappuccino" min="1" max="5"></h5>
-		<img src="img/Hot Chocolate.jpg" alt="Hot Chocolate" style='width:200px'>
-		<br>
-		<h5><input type="checkbox" id="check32" />Hot Chocolate : 9D
-		<input type="number" id="nHotChocolate" min="1" max="5"></h5>
-		<img src="img/caffe latte.jpg" alt="caffe latte" style='width:200px'>
-		<br>
-		<h5><input type="checkbox" id="check33" />Caffe Latte : 8D
-		<input type="number" id="nCaffeLatte" min="1" max="5"></h5>
-		<img src="img/Jus.jpg" alt="Jus" style='width:200px'>
-		<br>
-		<h5><input type="checkbox" id="check34" />Jus : 11D
-		<input type="number" id="nJus" min="1" max="5"></h5>
-		<img src="img/Tea.jpeg" alt="Tea" style='width:200px'>
-		<br>
-		<h5><input type="checkbox" id="check35" />Tea : 5D
-		<input type="number" id="nTea" min="1" max="5"></h5>
-		<img src="img/Croissant.jpg" alt="Croissant" style='width:200px'>
-		<br>
-		<h5><input type="checkbox" id="check36" />Croissant : 3D
-		<input type="number" id="nCroissant" min="1" max="5"></h5>
-
-		<div class="panier2" style="border: 1px solid black">
-			<p>here is your order : </p>
-			<input type="submit" class="accept" value="accept" style="background: lightgreen;float:right">
+		<br><br>
+		<div class="panier2" >
+			<h5 class="h5">Your order is here : </h5>
+			<input type="submit" class="accept" value="accept">
+			<div class="line"></div>
 		</div>
 	</div>
-	<center>
-		<div id="page4" style='display:none'>
+	<div id="page4" style='display:none'>
 			<button id='getBack'>Back</button>
 			<br><br>
-			<p>please fill you imformations:</p>
-			<label for="">Name:</label>
-			<input type="text" id="name" placeholder="Name"/>
-			<label for="">Address:</label>
-			<input type="text" id="address" placeholder="Address"/>
-			<label for="">Credit Card Number:</label>
-			<input type="text" id="cell" placeholder="credit card number"/>
-			<label for="">phone Number:</label>
-			<input type="text" id="cell" placeholder="phone number"/>
+			<h4>please fill you imformations:</h4>
+			<label for="" class='label4'>Name:</label>
+			<input type="text" id="name" class='input4' placeholder="Name"/>
+			<label for="" class='label4'>Address:</label>
+			<input type="text" id="address" class='input4' placeholder="Address"/>
 			<br><br>
-			<input type="submit" id="confirm" value="confirm/pay" style="background: lightgreen">
-		</div>
-	</center>
-	<center>
+			<label for="" class='label4'>Credit Card Number:</label>
+			<input type="text" id="cell" class='input4' placeholder="credit card number"/>
+			<label for="" class='label4'>phone Number:</label>
+			<input type="text" id="cell" class='input4' placeholder="phone number"/>
+			<br><br>
+			<input type="submit" id="confirm" value="confirm/pay">
+	</div>
 	<div id="lastpage" style="display:none">
 			<button id='home'>Home</button>
-			<p style="color: red; font-size: 36px">see you at your address in arround 15 minits</p>
-			<img src="img/delivering.gif" width="600px">
+			<p style="color: red; font-size: 36px">see you at your address in around 15 minutes</p>
+			<img src="img/delivering.gif" width="1000px">
 	</div>
-	</center>
+
 
 	<script src='https://code.jquery.com/jquery-2.2.4.js'></script>
 	<script type="text/javascript" src="Project.js"></script>
 	<script>
-		
 		$('#submit').click(function(a){
-			if($("#username").val()==="moez" && $("#password").val()==="moez" || $("#username").val()==="amine" && $("#password").val()==="amine"){
 				$("#page1").css('display','none')
 				$('#page2').css('display','block')
-			}else{a.preventDefault()}
 		})
 
 		$('#order1').click(function(){
@@ -220,78 +265,77 @@
 			$('#page2').css('display','block')
 		})
 
-
 		$("#check11").click(function(){
          if ($(this).is(":checked")) {
          	for (var i=0 ; i < $('#nSpaghetti').val() ;i++) {
-         		$('.panier').append("<li class='Spaghetti'>Spaghetti : 11D</li>")}}
+         		$("<li class='Spaghetti'>Spaghetti : 11D</li>").insertAfter('.h5')}}
          else{ $('.Spaghetti').remove()}
      	});  
      	$("#check12").click(function(){
          if ($(this).is(":checked")) {
          	for (var i=0 ; i < $('#nPizza').val() ;i++) {
-         	$('.panier').append("<li class='Pizza'>Pizza : 15D</li>")}}
+         	$("<li class='Pizza'>Pizza : 15D</li>").insertAfter('.h5')}}
          else{ $('.Pizza').remove()}
      	}); 
      	$("#check13").click(function(){
          if ($(this).is(":checked")) { 
          	for (var i=0 ; i < $('#nPastaefagioli').val() ;i++) {
-         	$('.panier').append("<li class='Pastaefagioli'>Pasta e fagioli : 9D</li>")}}
+         	$("<li class='Pastaefagioli'>Pasta e fagioli : 9D</li>").insertAfter('.h5')}}
          else{ $('.Pastaefagioli').remove()}
      	}); 
      	$("#check14").click(function(){
          if ($(this).is(":checked")) { 
          	for (var i=0 ; i < $('#nMinestrone').val() ;i++) {
-         	$('.panier').append("<li class='Minestrone'>Minestrone : 9D</li>")}}
+         	$("<li class='Minestrone'>Minestrone : 9D</li>").insertAfter('.h5')}}
          else{ $('.Minestrone').remove()}
      	}); 
      	$("#check15").click(function(){
          if ($(this).is(":checked")) { 
          	for (var i=0 ; i < $('#nRisotto').val() ;i++) {
-         	$('.panier').append("<li class='Risotto'>Risotto : 8D</li>")}}
+         	$("<li class='Risotto'>Risotto : 8D</li>").insertAfter('.h5')}}
          else{ $('.Risotto').remove()}
      	}); 
      	$("#check16").click(function(){
          if ($(this).is(":checked")) { 
          	for (var i=0 ; i < $('#nCacciucco').val() ;i++) {
-         	$('.panier').append("<li class='Cacciucco'>Cacciucco : 13D</li>")}}
+         	$("<li class='Cacciucco'>Cacciucco : 13D</li>").insertAfter('.h5')}}
          else{ $('.Cacciucco').remove()}
      	}); 
 
      	$("#check21").click(function(){
          if ($(this).is(":checked")) { 
          	for (var i=0 ; i < $('#nCouscous').val() ;i++) {
-         	$('.panier1').append("<li class='Couscous'>Couscous : 16D</li>")}}
+         	$("<li class='Couscous'>Couscous : 16D</li>").insertAfter('.h5')}}
          else{ $('.Couscous').remove()}
      	});  
      	$("#check22").click(function(){
          if ($(this).is(":checked")) { 
          	for (var i=0 ; i < $('#nOjja').val() ;i++) {
-         	$('.panier1').append("<li class='Ojja'>Ojja : 11D</li>")}}
+         	$("<li class='Ojja'>Ojja : 11D</li>").insertAfter('.h5')}}
          else{ $('.Ojja').remove()}
      	}); 
      	$("#check23").click(function(){
          if ($(this).is(":checked")) { 
          	for (var i=0 ; i < $('#nplat-tunisien').val() ;i++) {
-         	$('.panier1').append("<li class='plat-tunisien'>plat tunisien : 8D</li>")}}
+         	$("<li class='plat-tunisien'>plat tunisien : 8D</li>").insertAfter('.h5')}}
          else{ $('.plat-tunisien').remove()}
      	}); 
      	$("#check24").click(function(){
          if ($(this).is(":checked")) { 
          	for (var i=0 ; i < $('#nKafteji').val() ;i++) {
-         	$('.panier1').append("<li class='Kafteji'>Kafteji : 7D</li>")}}
+         	$("<li class='Kafteji'>Kafteji : 7D</li>").insertAfter('.h5')}}
          else{ $('.Kafteji').remove()}
      	}); 
      	$("#check25").click(function(){
          if ($(this).is(":checked")) { 
          	for (var i=0 ; i < $('#nBrick').val() ;i++) {
-         	$('.panier1').append("<li class='Brick'>Brick : 3D</li>")}}
+         	$("<li class='Brick'>Brick : 3D</li>").insertAfter('.h5')}}
          else{ $('.Brick').remove()}
      	}); 
      	$("#check26").click(function(){
          if ($(this).is(":checked")) { 
          	for (var i=0 ; i < $('#nFricasses').val() ;i++) {
-         	$('.panier1').append("<li class='Fricasses'>Fricassée : 2D</li>")}}
+         	$("<li class='Fricasses'>Fricassée : 2D</li>").insertAfter('.h5')}}
          else{ $('.Fricasses').remove()}
      	}); 
 
@@ -299,40 +343,50 @@
      	$("#check31").click(function(){
          if ($(this).is(":checked")) { 
          	for (var i=0 ; i < $('#nCappuccino').val() ;i++) {
-         	$('.panier2').append("<li class='Cappuccino'>Cappuccino : 8D</li>")}}
+         	$("<li class='Cappuccino'>Cappuccino : 8D</li>").insertAfter('.h5')}}
          else{ $('.Cappuccino').remove()}
      	});  
      	$("#check32").click(function(){
          if ($(this).is(":checked")) { 
          	for (var i=0 ; i < $('#nHotChocolate').val() ;i++) {
-         	$('.panier2').append("<li class='HotChocolate'>Hot Chocolate : 9D</li>")}}
+         	$("<li class='HotChocolate'>Hot Chocolate : 9D</li>").insertAfter('.h5')}}
          else{ $('.HotChocolate').remove()}
      	}); 
      	$("#check33").click(function(){
          if ($(this).is(":checked")) { 
          	for (var i=0 ; i < $('#nCaffeLatte').val() ;i++) {
-         	$('.panier2').append("<li class='CaffeLatte'>Caffe Latte : 8D</li>")}}
+         	$("<li class='CaffeLatte'>Caffe Latte : 8D</li>").insertAfter('.h5')}}
          else{ $('.CaffeLatte').remove()}
      	}); 
      	$("#check34").click(function(){
          if ($(this).is(":checked")) { 
          	for (var i=0 ; i < $('#nJus').val() ;i++) {
-         	$('.panier2').append("<li class='Jus'>Jus : 11D</li>")}}
+         	$("<li class='Jus'>Jus : 11D</li>").insertAfter('.h5')}}
          else{ $('.Jus').remove()}
      	}); 
      	$("#check35").click(function(){
          if ($(this).is(":checked")) { 
          	for (var i=0 ; i < $('#nTea').val() ;i++) {
-         	$('.panier2').append("<li class='Tea'>Tea : 5D</li>")}}
+         	$("<li class='Tea'>Tea : 5D</li>").insertAfter('.h5')}}
          else{ $('.Tea').remove()}
      	}); 
      	$("#check36").click(function(){
          if ($(this).is(":checked")) { 
          	for (var i=0 ; i < $('#nCroissant').val() ;i++) {
-         	$('.panier2').append("<li class='Croissant'>Croissant : 3D</li>")}}
+         	$("<li class='Croissant'>Croissant : 3D</li>").insertAfter('.h5')}}
          else{ $('.Croissant').remove()}
      	});
 
+     	var object ={'Spaghetti':11,'Pizza':15,'Pasta e fagioli':9,'Minestrone':9,'Risotto':8,'Cacciucco':13,
+     			'Couscous':16,'Ojja':11,'plat tunisien':8, 'Kafteji':7, 'Brick':3, 'Fricassée':2,'Cappuccino':8,'Hot Chocolate':9,'Caffe Latte':8,'Jus':11,'Tea':5,'Croissant':3
+		}
+		var counter = 0;
+		for(var key in object){
+		if($('.'+key).text()!==""){
+	
+		}
+	
+	}
 	</script>
 </body>
 </html>
