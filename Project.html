@@ -17,7 +17,7 @@
 		<label for="">Password:</label>
 		<input type="Password" id="password" placeholder="enter your password">
 		<br><br>
-		<input type="submit" id="submit" value="Enter"/>
+		<input type="submit" id="submit" value="Enter">
 	</div>
 	</center>
 	<div id="page2" style='display:none'>
@@ -43,7 +43,7 @@
 		<img src="img/Pizza.jpg" alt="Pizza" style='width:200px'>
 		<br>
 		<h5><input type="checkbox" id="check12" />Pizza : 15D
-			<input type="number" id="nPizza" min="1" max="5"></h5>
+		<input type="number" id="nPizza" min="1" max="5"></h5>
 		<img src="img/Pasta e fagioli.jpg" alt="Pasta e fagioli" style='width:200px'>
 		<br>
 		<h5><input type="checkbox" id="check13" />Pasta e fagioli : 9D
@@ -60,12 +60,12 @@
 		<br>
 		<h5><input type="checkbox" id="check16" />Cacciucco : 13D
 		<input type="number" id="nCacciucco" min="1" max="5"></h5>
-
 		<div class="panier" style="border: 1px solid black">
 			<p>here is your order : </p>
+			<input type="submit" class="accept" value="accept" style="background: lightgreen;float:right">
 		</div>
 	</div>
-
+		
 	<div id="page32" style='display:none'>
 		<input type="submit" class="retour" value="Back"/>
 		<br><br>
@@ -96,6 +96,7 @@
 
 		<div class="panier1" style="border: 1px solid black">
 			<p>here is your order : </p>
+			<input type="submit" class="accept" value="accept" style="background: lightgreen;float:right">
 		</div>
 	</div>
 
@@ -129,13 +130,38 @@
 
 		<div class="panier2" style="border: 1px solid black">
 			<p>here is your order : </p>
+			<input type="submit" class="accept" value="accept" style="background: lightgreen;float:right">
 		</div>
 	</div>
-
+	<center>
+		<div id="page4" style='display:none'>
+			<button id='getBack'>Back</button>
+			<br><br>
+			<p>please fill you imformations:</p>
+			<label for="">Name:</label>
+			<input type="text" id="name" placeholder="Name"/>
+			<label for="">Address:</label>
+			<input type="text" id="address" placeholder="Address"/>
+			<label for="">Credit Card Number:</label>
+			<input type="text" id="cell" placeholder="credit card number"/>
+			<label for="">phone Number:</label>
+			<input type="text" id="cell" placeholder="phone number"/>
+			<br><br>
+			<input type="submit" id="confirm" value="confirm/pay" style="background: lightgreen">
+		</div>
+	</center>
+	<center>
+	<div id="lastpage" style="display:none">
+			<button id='home'>Home</button>
+			<p style="color: red; font-size: 36px">see you at your address in arround 15 minits</p>
+			<img src="img/delivering.gif" width="600px">
+	</div>
+	</center>
 
 	<script src='https://code.jquery.com/jquery-2.2.4.js'></script>
 	<script type="text/javascript" src="Project.js"></script>
 	<script>
+		
 		$('#submit').click(function(a){
 			if($("#username").val()==="moez" && $("#password").val()==="moez" || $("#username").val()==="amine" && $("#password").val()==="amine"){
 				$("#page1").css('display','none')
@@ -164,6 +190,36 @@
 			$('#page32').css('display','none')
 			$('#page33').css('display','none')
 		})
+
+		$('.accept').click(function(){
+			$('#page31').css('display','none')
+			$('#page4').css('display','block')
+		})
+
+		$('.accept').click(function(){
+			$('#page32').css('display','none')
+			$('#page4').css('display','block')
+		})
+
+		$('.accept').click(function(){
+			$('#page33').css('display','none')
+			$('#page4').css('display','block')
+		})
+
+		$('#getBack').click(function(){
+			$('#page4').css('display','none')
+			$('#page31').css('display','block')
+		})
+
+		$('#confirm').click(function(){
+			$('#page4').css('display','none')
+			$('#lastpage').css('display','block')
+		})
+		$('#home').click(function(){
+			$('#lastpage').css('display','none')
+			$('#page2').css('display','block')
+		})
+
 
 		$("#check11").click(function(){
          if ($(this).is(":checked")) {
