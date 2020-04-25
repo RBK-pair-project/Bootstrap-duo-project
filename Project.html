@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-    <title> </title>
+    <title> Do Not Cook </title>
     <link rel="stylesheet" href="Project.css">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </head>
@@ -13,8 +13,8 @@
 		<br>
 		<h2>Welcome to</h2>
 		<h1>do not cook</h1>
-		<h3> Your food delivery service platform</h3>
-		<h3>Fresh.   Fast.   Local.</h3>
+		<h2> Your food delivery service platform</h3>
+		<h2>Fresh.   Fast.   Local.</h3>
 		<label for="" class="label-input">Username:</label>
 		<input type="text" id="username" class="css-input" placeholder="enter your name">
 		<br><br>
@@ -202,9 +202,9 @@
 			<input type="text" id ='input42' class='input4' placeholder="Address"/>
 			<br><br>
 			<label for="" class='label4'>Credit Card Number:</label>
-			<input type="text" id ='input43' class='input4' placeholder="credit card number"/>
+			<input type="tel" id ='input43' class='input4' autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"/>
 			<label for="" class='label4'>phone Number:</label>
-			<input type="text" id ='input44' class='input4' placeholder="phone number"/>
+			<input type="tel" id ='input44' class='input4' placeholder="12-345-678" required/>
 			<br><br>
 			<input type="submit" id="confirm" value="confirm/pay">
 			<div class="div-error">
@@ -274,7 +274,7 @@
 		})
 
 		$('#confirm').click(function(a){
-				if ($('#input41').val() === '' || $('#input42').val() === '' || $('#input43').val() === '' || $('#input44').val() === '') {
+				if ($('#input41').val() === '' || $('#input42').val() === '' || $('#input43').val().length <= 13 && $('#input43').val().length >= 19 || $('#input44').val().length !== 8) {
 				a.preventDefault()
 				$('.error4').css('display','block')
 				}
